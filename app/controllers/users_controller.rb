@@ -5,16 +5,16 @@ get '/signup' do
 end
 
 post '/signup' do
-    @user1 = User.new(params[:user])
+    user1 = User.new(params[:user])
+        #params[:user] extended version is below
+    # user1.name     = params[:user][:name]
+    # user1.email    = params[:user][:email]
+    # user1.password = params[:user][:password]
 
-    if user1.save #validate name,email, password, then (user.rb validation)
-    @user1.name     = params[:user][:name]
-    @user1.email    = params[:user][:email]
-    @user1.password = params[:user][:password]
-
-    # "Successful! You now have an account at Quora"
+    if user1.save #validate name,email, password before save
+        # redirect ?
     else
-        #on frontend (use ajax?) show please check for following errors
+        # redirect ?
     end
 
     erb :"static/index"

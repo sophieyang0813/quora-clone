@@ -1,5 +1,8 @@
+// when someone click answer button in question erb page, then only that one uploads;
+
+
 function log(){
-    var form = $('#signup-form');
+    var form = $('#answer-form');
     form.on('submit',function(formSubmissionEvent){
         formSubmissionEvent.preventDefault();
 

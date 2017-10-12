@@ -1,7 +1,9 @@
+<!-- PUT ANSWER DATABASE -->
 
-<h1>MAIN PAGE</h1>
 
+<h1>ANSWER ERB</h1>
 
+<link rel="stylesheet" href="/css/application.css">
 <p>Welcome!<%= current_user.name %></p>
 <p>You are logged in</p>
 
@@ -16,7 +18,6 @@
 
 
 
-
 <h3> What is your question? </h3>
 <form method="post" action="/ask">
     <input type="text"     placeholder="what is your question?" name="user[question]">
@@ -24,6 +25,20 @@
 </form>
 
 
-
 <h3>a list of questions </h3>
+
+
+<% Question.all.each do |q| %>
+<div class= "question_container">
+ <h5><%= current_user.name %></h5>
+  <h5><%= q.content %></h5>
+  <form method="post" action="/submit_answer" id ="answer-form">
+      <input type="text" placeholder="what is your answer" name="user[answer]">
+    <input type="submit" value="submit">
+  </form>
+  </div>
+<% end %>
+
+
+
 
