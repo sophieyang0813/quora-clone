@@ -1,3 +1,20 @@
-<h1>main page</h1>
+
+<h1>MAIN PAGE</h1>
+
+
+<p>Welcome!<%= current_user.name %></p>
+<p>You are logged in</p>
+
+
+<form method="post" action="/logout">
+    <input type="submit" value="logout">
+</form>
+
+<form method="get" action="/users/:id">
+    <input type="submit" value="your profile page">
+</form>
+
+
 
 <h3>a list of questions </h3>
+
