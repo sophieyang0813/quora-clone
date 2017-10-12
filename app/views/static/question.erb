@@ -30,8 +30,9 @@
 <div class= "question_container">
  <h5><%= current_user.name %></h5>
   <h5><%= q.content %></h5>
-  <form method="post" action="/answer">
+  <form method="post" action="/answer" class="answer_form">
     <input type="submit" value="answer">
+    <p id="answer"></p>
   </form>
   </div>
 <% end %>
