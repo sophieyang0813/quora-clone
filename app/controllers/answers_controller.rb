@@ -1,8 +1,4 @@
-post '/answer' do
 
-erb :"static/answer"
-
-end
 
 # post '/submit_answer' do
 
