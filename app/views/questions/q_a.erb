@@ -1,0 +1,23 @@
+
+
+<h1>Q_A: when user answers</h1>
+
+
+<h2> <%= Question.find(@question_id).content %></h2>
+<!-- just want the name -->
+<h2><%= User.find_by(id:(Question.find(@question_id).user_id)).name %></h2>
+
+
+
+
+<!--
+(Question.find(@question_id).user_id) = 10
+
+
+User.find_by(id:(Question.find(@question_id).user_id)).name -->
+
+User.find_by(id:10).name
+
+<h3> <%= @answer %> </h3>
+<h3> <%= @answer %> </h3>
+

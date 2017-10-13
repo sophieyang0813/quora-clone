@@ -1,12 +1,23 @@
+post '/answer' do
+
+    answer1 = Answer.new
+    answer1.user_id = current_user.id
+    answer1.question_id = params[:user][:question_id]
+    answer1.response = params[:user][:answer]
+
+    answer1.save
+
+    ##why @instance variable? for q_a.erb
+    @question_id = params[:user][:question_id]
+    @answer = params[:user][:answer]
+    erb:"questions/q_a"  #redirect q_a erb
+
+end
 
 
-# post '/submit_answer' do
+get '/q_a2' do
 
-# answer1 = Answer.new
-# answer1.user_id = current_user.user_id
-# # answer1.question_id =
-# answer1.response = params[:user][:answer]
 
-# erb:"static/q_a"  #redirect q_a erb
 
-# end
+erb :"static/q_a2"
+end

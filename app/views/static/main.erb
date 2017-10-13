@@ -27,3 +27,12 @@
 
 <h3>a list of questions </h3>
 
+<% Question.all.each do |q| %>
+<div class= "question_container">
+    <div class="addform">
+      <h5><%= q.user.name %></h5>
+      <h5><a href="/questions/<%= q.id %>"><%= q.content %></a></h5>
+      <button data-question-id="<%= q.id %>" class="answerbutton">answer</button>
+    </div>
+  </div>
+<% end %>

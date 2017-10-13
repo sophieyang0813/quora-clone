@@ -18,6 +18,7 @@
 <form method="post" action="/ask">
     <input type="text"     placeholder="what is your question?" name="user[question]">
     <input type="submit" value="ask">
+
 </form>
 
 
@@ -30,16 +31,13 @@
 <!-- <button>click me!</button> -->
 
 
-
-
-<!-- experiment -->
-
 <% Question.all.each do |q| %>
 <div class= "question_container">
     <div class="addform">
-      <h5><%= current_user.name %></h5>
-      <h5><%= q.content %></h5>
-      <button class="answerbutton">answer</button>
+      <h5><%= q.user.name %></h5>
+      <h5><a href="/questions/<%= q.id %>"><%= q.content %></a></h5>
+      <input type="hidden" name="question_id" value="<%= q.id%>">
+      <button data-question-id="<%= q.id %>" class="answerbutton">answer</button>
     </div>
   </div>
 <% end %>

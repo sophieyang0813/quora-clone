@@ -1,0 +1,13 @@
+<h1>SHOW</h1>
+
+
+<!-- see question controller =get '/questions/:id' do  -->
+
+<!-- question -->
+<p><%= @question.content %></p>
+
+<!-- all the answers / I can do the following because active record associations -->
+<% @question.answers.each do |a| %>
+<h3><%=a.user.name %></h3>
+<h3><%=a.response %></h3>
+<% end %>
