@@ -6,8 +6,12 @@ class User < ActiveRecord::Base
 
     has_many :questions
     has_many :answers
+    has_many :questionvotes
+    has_many :answervotes
 
 
+
+# http://guides.rubyonrails.org/association_basics.html#the-belongs-to-association
 
 
 	# This is Sinatra! Remember to create a migration!

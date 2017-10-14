@@ -1,5 +1,6 @@
 
-<h1>QUESTION PAGE</h1>
+<h1>Q_vote: Question Vote Submitted</h1>
+
 
 <p>Welcome!<%= current_user.name %></p>
 <p>You are logged in</p>
@@ -18,36 +19,22 @@
 <form method="post" action="/ask">
     <input type="text"     placeholder="what is your question?" name="user[question]">
     <input type="submit" value="ask">
-
 </form>
 
 
+
 <h3>a list of questions </h3>
-
-<div class= "question_container">
-<div class="vanish">HELLO</div>
-<button>answer</button>
-</div>
-<!-- <button>click me!</button> -->
-
 
 <% Question.all.each do |q| %>
 <div class= "question_container">
     <div class="addform">
       <h5><%= q.user.name %></h5>
       <h5><a href="/questions/<%= q.id %>"><%= q.content %></a></h5>
-      <input type="hidden" name="question_id" value="<%= q.id%>">
+
       <button data-question-id="<%= q.id %>" class="answerbutton">answer</button>
-      <form method="get" action="/q_upvote">
-        <input type="submit" value="upvote">
+        <input type="submit" value="upvote" data-questionvote-count="<%= q.questionvotes.count %>" class ="newQvtBtn">
         <input type="hidden" name ="question_id" value="<%= q.id %>" >
       </form>
     </div>
   </div>
 <% end %>
-
-
-
-
-
-

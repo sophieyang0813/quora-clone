@@ -1,4 +1,5 @@
 
+// main.erb answer button
 
 $(document).ready(function(){
     $('.answerbutton').click(function(e){
@@ -11,46 +12,44 @@ $(document).ready(function(){
 });
 
 
-
-// #when you click on input specific type "submit"
-// then only this specific answer pops out, not all the answer
-
-
-// # problem -<input type="submit" value="answer"> inside the append as string. How do I set this as a class to do javascript?
-
-// # answer? ajax?
+//click on upvote for answer => following problem
+//PROBLEM4: Why upvote2 button disappear after I click upvote? why does it reload? it reloads even after I remove redirect? 2) please tell me how to use inspect console currentTarget ( or how do I see the list of these?)
+//QUESTION: difference? adding data-answervote-count to input vs. to form
 
 
+$(document).ready(function(){
+    $('.newAnswrvtBtn').click(function(e){
+        var clickedBtn = e.currentTarget
+        var voteCount =  $(e.currentTarget).data('answervote-count')
+        $(clickedBtn).hide('slow', function(){
+        $(clickedBtn.parentElement).append('<button>upvote2 | "'+ voteCount +'" yay</button>');
+        });
+    });
+});
 
-// $(document).ready(function(){
-//     $().click(function(){
-//         $.ajax({url: ,
-//             success: function(result){
-//                 $("#para").html(result);
-//             }
-//         }
-//     })
-// })
+//now created a new page for question vote, then this
+//other than .click function, what are the option? I just want to show
+//I need to click first to see upvote2-votecount button.
+//before going to the new page, I want this to remember that I clicked on this, so that I dont have to click it again.
 
+//tying callback jquery
 
-// https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_ajax
-
-
-
-
-
-
-
-
-
-
+$(document).ready(function(){
+    $('.newQvtBtn').click(function(e){
+        var clickedBtn = e.currentTarget
+        var voteCount =  $(e.currentTarget).data('questionvote-count')
+        $(clickedBtn).hide('slow', function(){
+        $(clickedBtn.parentElement).append('<button>upvote2 | "'+ voteCount +'" yay</button>');
+         });
+    });
+});
 
 
 
 
 
 
-
+///////
 
 
 
@@ -58,36 +57,33 @@ $(document).ready(function(){
 
 
 
+// when I click on it it shows the current number of vote count (0),
+// then vote for the second times, then it shows 1 vote count; \
 
+//this indicates that when submit; button clicked, the sequences are following
+//1) show the existing data, then 2) add to the database, then 3) refresh the page with the new database
 
-//////////////////////////////////////   attempt
-
-// function onlyonebox(){
-//     var form = $(clickedBtn.parentElement);
-//     form.on('submit',function(formSubmissionEvent){
-//         formSubmissionEvent.preventDefault();
-
-
-//     $.ajax({
-//         url: form.attr('action'),
-//         method: form.attr('method'),
-//         data: form.serialize(),
-//         dataType: 'JSON',
-//         success: function(response){
-//             (response.id) {}
-//             if (response.id) {
-//                 $('#yay').append(
-// )
-//                }
-
-//         }
-
-//     })
-
-//     })
-// }
+//but the sequence I want is that 1) add to the database, 2) then show the existing data
+//what you can try is that create the button inside of the form, as opposed to encompassing the form.
 
 
 
 
-// document.addEventListener("DOMContentLoaded",attachform);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
