@@ -6,6 +6,12 @@
 <!-- question -->
 <p><%= @question.content %></p>
 
+<!-- problem 5 how do I check whether this is connect to the application.js code?   -->
+<div>
+<button data-question-id=<%= @question.id %> class="answerbutton">answer</button>
+</div>
+
+
 <!-- all the answers / I can do the following because active record associations -->
 
 <% @question.answers.each do |a| %>

@@ -12,6 +12,7 @@ $(document).ready(function(){
 });
 
 
+
 //click on upvote for answer => following problem
 //PROBLEM4: Why upvote2 button disappear after I click upvote? why does it reload? it reloads even after I remove redirect? 2) please tell me how to use inspect console currentTarget ( or how do I see the list of these?)
 //QUESTION: difference? adding data-answervote-count to input vs. to form
