@@ -2,7 +2,7 @@ get '/' do
     if logged_in?
         erb :"static/main"
     else
-        erb :"static/index"
+        erb :"static/signup"
     end
 end
 

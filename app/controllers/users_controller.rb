@@ -1,6 +1,6 @@
 get '/signup' do
 
-    erb :"static/index"
+    erb :"static/signup"
 
 end
 
@@ -17,7 +17,7 @@ post '/signup' do
         # redirect ?
     end
 
-    erb :"static/index"
+    erb :"static/singup"
 
 end
 
@@ -29,7 +29,7 @@ post '/login' do
        session[:user_id] = @a.id   #### session cookie remembers you
        redirect '/'
     else
-       erb :"static/index"
+       erb :"static/singup"
     end
 
 end
@@ -42,7 +42,7 @@ end
 
 post '/logout' do
     session[:user_id] = nil
-     erb :"static/index"
+     erb :"static/signup"
 end
 
 

@@ -12,16 +12,27 @@
 </div>
 
 
+
+
 <!-- all the answers / I can do the following because active record associations -->
 
 <% @question.answers.each do |a| %>
 <div class= "answer_container">
     <h3><%=a.user.name %></h3>
     <h3><%=a.response %></h3>
-    <form method="get" action="/a_upvote">
-            <input type="submit" value="upvote" data-answervote-count="<%=a.answervotes.count%>"class ="newAnswrvtBtn">
+    <form method="get" action="/a_upvote" class="a_upvote_up">
+            <input type="submit" value="upvote" class ="newAnswrvtBtn">
             <input type="hidden" name ="answer_id" value="<%= a.id %>">
             <input type="hidden" name ="question_id" value="<%= @question.id %>">
     </form>
+
+    <form method="post" action="/comment">
+        <input type="text" placeholder="Add a comment.." name="user[comment]">
+        <input type="submit" value="comment">
+         <input type="hidden" name ="answer_id" value="<%= a.id %>">
+    </form>
+
+
+
 </div>
 <% end %>

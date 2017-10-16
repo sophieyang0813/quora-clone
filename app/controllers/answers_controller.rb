@@ -21,3 +21,15 @@ get '/q_a2' do
 
 erb :"static/q_a2"
 end
+
+
+post '/comment' do
+
+    comment1 = Comment.new
+    comment1.user_id = current_user.id
+    comment1.answer_id = params[:answer_id]
+    comment1.comment = params[:user][:comment]
+
+    comment1.save
+
+end

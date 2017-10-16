@@ -31,8 +31,8 @@
       <h5><%= q.user.name %></h5>
       <h5><a href="/questions/<%= q.id %>"><%= q.content %></a></h5>
       <button data-question-id="<%= q.id %>" class="answerbutton">answer</button>
-      <form method="get" action="/q_upvote">
-        <input type="submit" value="upvote" data-questionvote-count="<%= q.questionvotes.count %>" class ="newQvtBtn">
+      <form method="get" action="/q_upvote" class="q_upvote_up">
+        <input type="submit" value="upvote" class ="newQvtBtn">
         <input type="hidden" name ="question_id" value="<%= q.id %>" >
       </form>
     </div>
