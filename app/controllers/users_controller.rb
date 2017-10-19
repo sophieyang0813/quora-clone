@@ -10,9 +10,12 @@ post '/signup' do
     # user1.name     = params[:user][:name]
     # user1.email    = params[:user][:email]
     # user1.password = params[:user][:password]
-
-    if user1.save #validate name,email, password before save
+byebug
+    if user1.save
+     #validate name,email, password before save
         # redirect ?
+
+        @msg = "sign up successful"
     else
         # redirect ?
     end

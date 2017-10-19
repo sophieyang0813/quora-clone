@@ -1,16 +1,14 @@
 $(document).ready(function(){
-    $('.sgnupBtn').click(function(e){
-        var clickedBtn = e.currentTarget
-        $(clickedBtn).append('<p>Signup successful!</p>');
-    });
-});
+    // $('.sgnupBtn').click(function(e){
+    //     var clickedBtn = e.currentTarget  // $(this)
+    //     clickedBtn.value = 'Signup successful'
+    // });
 
 
 
 
-// main.erb answer button
 
-$(document).ready(function(){
+
     $('.answerbutton').click(function(e){
         var clickedBtn = e.currentTarget
         var questionId = $(e.currentTarget).data('question-id')
@@ -19,6 +17,15 @@ $(document).ready(function(){
 
     });
 });
+
+
+
+
+// main.erb answer button
+
+// $(document).ready(function(){
+
+// });
 
 
 
