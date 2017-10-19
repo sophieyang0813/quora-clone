@@ -4,6 +4,9 @@
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/signup.css">
   <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/mainpage.css">
 
   <!-- javascript  -->
   <script
@@ -14,11 +17,24 @@
   <script type='text/javascript' src='/js/vote.js'></script>
 
 
-
-
 		<title>Quora in making</title>
 	</head>
+
+
 	<body>
+  <ul>
+    <li class="logo">QUORA</li>
+    <li><a href="/" class="underline">Home</a></li>
+    <li id="right2"><form method="post" action="/logout">
+    <input class="btntolink" type="submit" value="logout"></form></li>
+    <li id="right1"><form method="get" action="/users/:id">
+    <input class="btntolink" type="submit" value="Your profile page">
+    </form></a></li>
+  </ul>
+
+  <hr style="margin:-6;">
+
+
 		<%= yield %>
 	</body>
 </html>

@@ -12,6 +12,8 @@ post '/answer' do
     @answer = params[:user][:answer]
     erb:"questions/q_a"  #redirect q_a erb
 
+
+
 end
 
 

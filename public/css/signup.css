@@ -1,6 +1,4 @@
-
-
-.signup {
+body {
     background: url("../img/signup.jpeg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -11,7 +9,18 @@
     min-width: 1400px !important;
 }
 
+/*.signup {
+    background: url("../img/signup.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    height : 100%;
+    overflow: auto;
+    min-width: 1400px !important;
+}
 
+*/
 
 .center {
     margin: auto;

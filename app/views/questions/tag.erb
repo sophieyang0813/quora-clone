@@ -1,0 +1,9 @@
+<h1>Tag Question</h1>
+
+
+<h2><%= @questiontag.tag %></h2>
+
+
+<% @questiontag.question.each do |q| %>
+<h3><%= q.content%></h3>
+<% end %>

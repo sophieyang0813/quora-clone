@@ -1,38 +1,41 @@
 <h1>SHOW</h1>
-<h2>click on question => question with all the answers</h2>
 
-<!-- see question controller =get '/questions/:id' do  -->
 
-<!-- question -->
-<p><%= @question.content %></p>
+<div class="center1">
+    <div class="textcenter">
+    <h2><%= @question.content %></h2>
+    <button data-question-id=<%= @question.id %> class="answerbutton Btn">answer</button>
+    <br>
+    <hr>
+    <br>
+    </div>
 
-<!-- problem 5 how do I check whether this is connect to the application.js code?   -->
-<div>
-<button data-question-id=<%= @question.id %> class="answerbutton">answer</button>
+
+
+
+    <!-- all the answers / I can do the following because active record associations -->
+
+    <% @question.answers.each do |a| %>
+    <div class= "question_container">
+        <h3><%=a.user.name %></h3>
+        <h3><%=a.response %></h3>
+        <form method="get" action="/a_upvote" class="a_upvote_up">
+                <input type="submit" value="upvote" class ="newAnswrvtBtn Btn">
+                <input type="hidden" name ="answer_id" value="<%= a.id %>">
+                <input type="hidden" name ="question_id" value="<%= @question.id %>">
+        </form>
+
+        <form method="post" action="/comment">
+            <input type="text" placeholder="Add a comment.." name="user[comment]" class="textboxid">
+            <input type="submit" value="comment">
+             <input type="hidden" name ="answer_id" value="<%= a.id %>">
+        </form>
+    </div>
+         <br>
+        <hr>
+        <br>
+    <% end %>
+
+
+
 </div>
-
-
-
-
-<!-- all the answers / I can do the following because active record associations -->
-
-<% @question.answers.each do |a| %>
-<div class= "answer_container">
-    <h3><%=a.user.name %></h3>
-    <h3><%=a.response %></h3>
-    <form method="get" action="/a_upvote" class="a_upvote_up">
-            <input type="submit" value="upvote" class ="newAnswrvtBtn">
-            <input type="hidden" name ="answer_id" value="<%= a.id %>">
-            <input type="hidden" name ="question_id" value="<%= @question.id %>">
-    </form>
-
-    <form method="post" action="/comment">
-        <input type="text" placeholder="Add a comment.." name="user[comment]">
-        <input type="submit" value="comment">
-         <input type="hidden" name ="answer_id" value="<%= a.id %>">
-    </form>
-
-
-
-</div>
-<% end %>

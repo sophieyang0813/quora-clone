@@ -18,7 +18,7 @@ var form = $('.q_upvote_up');
                 if (response) {
                     form.find('.newQvtBtn').remove()
                     form.append(
-                        "<button class='newQvtBtn'>"+ "upvoted | " + response +"</button>");
+                        "<button class='newQvtBtn Btn'>"+ "upvoted | " + response +"</button>");
                 }
 
             }

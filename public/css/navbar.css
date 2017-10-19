@@ -1,0 +1,87 @@
+li{
+   text-decoration:  none;
+  font-family: 'Ribeye Marrow', cursive;
+  font-weight: bold;
+  font-size: 18px;
+  color: grey;
+  background-color: transparent;
+/*  float: left;*/
+  position: relative;
+  padding: 10px 20px;
+  overflow: hidden;
+
+}
+
+
+.btntolink {
+     background:none!important;
+     color:inherit;
+     border:none;
+     padding:0!important;
+     font: inherit;
+}
+
+
+
+.underline {
+  text-decoration:  none;
+}
+
+#right2 {
+    position: relative;
+    left:1100;
+    padding-right: 80px;
+
+}
+
+#right1 {
+    position: relative;
+    left:750;
+
+}
+
+
+/*#right2:hover::after {
+  width: 100%;
+
+}
+*/
+
+li::after {
+  background-color: rgba(192,192,192,0.3);
+  content: "";
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.25s ease 0s;
+  position: absolute;
+}
+
+li:hover::after {
+  width: 100%;
+
+}
+
+
+
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.logo {
+    color:rgba(214,94,36,1);
+    font-size: 22px;
+    font-family: 'Ribeye Marrow', cursive;
+    position: relative;
+    bottom:auto;
+    width: auto;
+}
+
+
+

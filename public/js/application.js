@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    $('.sgnupBtn').click(function(e){
+        var clickedBtn = e.currentTarget
+        $(clickedBtn).append('<p>Signup successful!</p>');
+    });
+});
+
+
+
 
 // main.erb answer button
 
@@ -6,7 +15,7 @@ $(document).ready(function(){
         var clickedBtn = e.currentTarget
         var questionId = $(e.currentTarget).data('question-id')
         $(clickedBtn).fadeOut('fast');
-        $(clickedBtn.parentElement).append('<p><form method="post" action="/answer"><input type="text" placeholder="what is your answer" name="user[answer]"><input type="submit" value="answer"><input type="hidden" name="user[question_id]" value="' + questionId + '"></form></p>');
+        $(clickedBtn.parentElement).append('<p><form method="post" action="/answer"><input type="text" placeholder="what is your answer" name="user[answer]" class ="textboxid"><input type="submit" value="answer" class ="sgnupBtn"><input type="hidden" name="user[question_id]" value="' + questionId + '"></form></p>');
 
     });
 });

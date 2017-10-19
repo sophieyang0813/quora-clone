@@ -17,7 +17,7 @@ post '/signup' do
         # redirect ?
     end
 
-    erb :"static/singup"
+    erb :"static/signup"
 
 end
 
@@ -29,7 +29,7 @@ post '/login' do
        session[:user_id] = @a.id   #### session cookie remembers you
        redirect '/'
     else
-       erb :"static/singup"
+       erb :"static/signup"
     end
 
 end

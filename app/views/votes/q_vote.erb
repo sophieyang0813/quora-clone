@@ -32,7 +32,7 @@
       <h5><a href="/questions/<%= q.id %>"><%= q.content %></a></h5>
 
       <button data-question-id="<%= q.id %>" class="answerbutton">answer</button>
-        <input type="submit" value="upvote" data-questionvote-count="<%= q.questionvotes.count %>" class ="newQvtBtn">
+        <input type="submit" value="upvote" data-questionvote-count="<%= q.questionvotes.count %>" class ="newQvtBtn Btn">
         <input type="hidden" name ="question_id" value="<%= q.id %>" >
       </form>
     </div>
