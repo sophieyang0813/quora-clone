@@ -25,11 +25,15 @@
   <ul>
     <li class="logo">QUORA</li>
     <li><a href="/" class="underline">Home</a></li>
-    <li id="right2"><form method="post" action="/logout">
-    <input class="btntolink" type="submit" value="logout"></form></li>
-    <li id="right1"><form method="get" action="/users/:id">
-    <input class="btntolink" type="submit" value="Your profile page">
-    </form></a></li>
+    <% if current_user %>
+      <li id="right2"><form method="post" action="/logout">
+      <input class="btntolink" type="submit" value="logout"></form></li>
+      <li id="right1">
+        <form method="get" action="/users/<%= current_user.id %>">
+          <input class="btntolink" type="submit" value="Your profile page">
+        </form></a>
+      </li>
+    <% end %>
   </ul>
 
   <hr style="margin:-6;">
