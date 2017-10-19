@@ -1,0 +1,99 @@
+body {
+    background: url("../img/signup.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    height : 100%;
+    overflow: auto;
+    min-width: 1400px !important;
+}
+
+/*.signup {
+    background: url("../img/signup.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    height : 100%;
+    overflow: auto;
+    min-width: 1400px !important;
+}
+
+*/
+
+.center {
+    margin: auto;
+    margin-top: 150;
+    padding-bottom:200;
+    width: 60%;
+    border: 3px solid rgba(192,192,192,0.1);
+    background-color: rgba(192,192,192,0.3);
+    border-radius: 8px;
+    font-family: 'Ribeye Marrow', cursive;
+    height:180;
+}
+
+
+
+.middle {
+    text-align: center;
+}
+
+
+.container {
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    padding-right: 80px;
+
+}
+
+.left {
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    padding-left: 150px;
+}
+
+.vl {
+    border-left: 2px solid rgba(192,192,192,0.5);
+    height: 180px;
+    margin-top:290;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.textboxid {
+    height:50px;
+    width: auto;
+    font-size:15px;
+    opacity: 0.5;
+    border-radius: 10px;
+    text-align:center;
+    font-family: 'Ribeye Marrow', cursive;
+
+}
+
+.sgnupBtn {
+    height:30px;
+    width: auto;
+    font-size:15px;
+    opacity: 0.5;
+    border-radius: 10px;
+    text-align:right;
+    font-family: 'Ribeye Marrow', cursive;
+
+
+}
+
+
+

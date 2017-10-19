@@ -1,20 +1,57 @@
 
-<h1>MAIN PAGE</h1>
+
+<div class="center1">
+
+  <div class= "textcenter">
+    <h2>Welcome!  <%= current_user.name %></h2>
+    <p>You are logged in</p>
+  </div>
+
+  <div>
+      <h3> What is your question? </h3>
+      <form method="post" action="/ask">
+          <input type="text"     placeholder="what is your question?" name="user[question]" class ="textboxid1">
+          <!-- <input type="text"     placeholder="add tags" name="user[tag]"> -->
+          <input type="submit" value="ask" class="Btn">
+      </form>
+  </div>
+
+  <div class= "textcenter">
+      <h3>a list of questions </h3>
+  </div>
+      <% Question.all.each do |q| %>
+      <div class= "question_container">
+          <div class="addform">
+            <h5><%= q.user.name %></h5>
+
+            <h5><a href="/questions/<%= q.id %>" style="text decoration: none;"><%= q.content %></a></h5>
+            <button data-question-id="<%= q.id %>" class="answerbutton Btn">answer</button>
+            <form method="get" action="/q_upvote" class="q_upvote_up">
+              <input type="submit" value="upvote" class ="newQvtBtn Btn">
+              <input type="hidden" name ="question_id" value="<%= q.id %>" >
+            </form>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+      <% end %>
 
 
-<p>Welcome!<%= current_user.name %></p>
-<p>You are logged in</p>
-
-
-<form method="post" action="/logout">
-    <input type="submit" value="logout">
-</form>
-
-<form method="get" action="/users/:id">
-    <input type="submit" value="your profile page">
-</form>
+</div>
 
 
 
-<h3>a list of questions </h3>
+
+
+
+
+ <!-- <form method="post" action="/logout">
+      <input type="submit" value="logout">
+  </form>
+
+  <form method="get" action="/users/:id">
+      <input type="submit" value="your profile page">
+  </form>
+   -->
 

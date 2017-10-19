@@ -4,8 +4,14 @@ class User < ActiveRecord::Base
     validates :email, uniqueness: { message: "this email is already taken" }
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
 
+    has_many :questions
+    has_many :answers
+    has_many :questionvotes
+    has_many :answervotes
 
 
+
+# http://guides.rubyonrails.org/association_basics.html#the-belongs-to-association
 
 
 	# This is Sinatra! Remember to create a migration!

@@ -1,0 +1,21 @@
+<h1>SHOW</h1>
+<h2>click on question => question with all the answers</h2>
+
+<!-- see question controller =get '/questions/:id' do  -->
+
+<!-- question -->
+<p><%= @question.content %></p>
+
+<!-- all the answers / I can do the following because active record associations -->
+
+<% @question.answers.each do |a| %>
+<div class= "answer_container">
+    <h3><%=a.user.name %></h3>
+    <h3><%=a.response %></h3>
+    <form method="get" action="/a_upvote">
+            <input type="submit" value="upvote" data-answervote-count="<%=a.answervotes.count%>"class ="newAnswrvtBtn">
+            <input type="hidden" name ="answer_id" value="<%= a.id %>">
+            <input type="hidden" name ="question_id" value="<%= @question.id %>">
+    </form>
+</div>
+<% end %>

@@ -1,0 +1,51 @@
+
+.question_container{
+    height: auto;
+    width: 100%;
+    border: 3px solid rgba(192,192,192,0.1);
+    background-color: rgba(192,192,192,0.5);
+    border-radius: 8px;
+}
+
+
+
+
+.center1 {
+    margin: auto;
+    padding-bottom:200;
+    width: 60%;
+    border: 3px solid rgba(192,192,192,0.1);
+    background-color: rgba(192,192,192,0.3);
+    border-radius: 8px;
+    font-family: 'Ribeye Marrow', cursive;
+    height:auto;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+
+.textboxid1 {
+    height:50px;
+    width: 900px;
+    font-size:15px;
+    opacity: 0.5;
+    border-radius: 10px;
+    text-align:center;
+    font-family: 'Ribeye Marrow', cursive;
+
+}
+
+
+.Btn {
+    height:30px;
+    width: auto;
+    font-size:15px;
+    opacity: 0.5;
+    border-radius: 10px;
+    text-align:right;
+    font-family: 'Ribeye Marrow', cursive;
+
+
+}

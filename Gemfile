@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Ruby Version
-# ruby "2.2.1"
+ruby '2.3.4'
+
 gem 'bcrypt', '~>3.1.7'
 # Adding Sinatra Drivers
 gem 'sinatra'
@@ -23,6 +24,8 @@ gem 'rake'
 
 # Adding rspec for running unit testing
 gem 'rspec'
+
+gem 'byebug'
 
 group :development, :test do
 	# Adding shotgun for local web hosting
