@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
 
     has_many :questions
+
+    # def questions
+    #     return Question.where(user_id: user)
+    # end
     has_many :answers
     has_many :questionvotes
     has_many :answervotes
